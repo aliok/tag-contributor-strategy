@@ -85,21 +85,21 @@ func Hugo() error {
 
 // Build the live website.
 func Deploy() error {
-	mg.Deps(docsy, syncGoMod, netlifySetup)
+	mg.Deps(syncGoMod, netlifySetup)
 
 	return shx.RunV("hugo", "-s", "website", "--debug", "--verbose", "-b", "https://contribute.cncf.io/")
 }
 
 // Deploy branch builds the website, including future dated and draft posts
 func DeployBranch() error {
-	mg.Deps(docsy, syncGoMod, netlifySetup)
+	mg.Deps(syncGoMod, netlifySetup)
 
 	return shx.RunV("hugo", "-s", "website", "--debug", "--buildDrafts", "--buildFuture", "--verbose", "-b", getBaseUrl())
 }
 
 // Deploy preview builds the website for a pull request, using the same build settings as the live site.
 func DeployPreview() error {
-	mg.Deps(docsy, syncGoMod, netlifySetup)
+	mg.Deps(syncGoMod, netlifySetup)
 
 	return shx.RunV("hugo", "-s", "website", "--debug", "--buildDrafts", "--buildFuture", "--verbose", "-b", getBaseUrl())
 }
@@ -151,22 +151,9 @@ func getPort() string {
 }
 
 func buildImage() error {
-	mg.Deps(docsy)
 	err := shx.RunE("docker", "build", "-t", img,
 		"-f", "website/Dockerfile", ".")
 	return errors.Wrap(err, "could not build website image")
-}
-
-func docsy() error {
-	_, err := os.Stat("website/themes/docsy/assets/vendor/bootstrap/scss/bootstrap.scss")
-	if err != nil {
-		if os.IsNotExist(err) {
-			return shx.RunV("git", "submodule", "update", "--init", "--recursive", "--force")
-		}
-		return errors.Wrap(err, "could not clone the docsy theme")
-	}
-
-	return nil
 }
 
 func containerExists(name string) bool {
