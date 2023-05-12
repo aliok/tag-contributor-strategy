@@ -1,0 +1,11 @@
+github.com/FortAwesome/Font-Awesome v0.0.0-20200715213439-951a0d011f8c h1:SYCJ0U9Mg3c+rz9x+KuhWKdfW/RgZeRtl3M8WXdVw54=
+github.com/FortAwesome/Font-Awesome v0.0.0-20200715213439-951a0d011f8c/go.mod h1:IUgezN/MFpCDIlFezw3L8j83oeiIuYoj28Miwr/KUYo=
+github.com/FortAwesome/Font-Awesome v0.0.0-20220831210243-d3a7818c253f/go.mod h1:IUgezN/MFpCDIlFezw3L8j83oeiIuYoj28Miwr/KUYo=
+github.com/google/docsy v0.0.0-20201102101051-e67775a312f1 h1:0je3FuGLOeYw4NpGdy7xsk60aTJCqNo2EQhRy7VmCCc=
+github.com/google/docsy v0.0.0-20201102101051-e67775a312f1/go.mod h1:alhAPKceHP14eqO+nJEhYehHeNcPKV8QnduoauTBZhs=
+github.com/google/docsy v0.6.0 h1:43bVF18t2JihAamelQjjGzx1vO2ljCilVrBgetCA8oI=
+github.com/google/docsy v0.6.0/go.mod h1:VKKLqD8PQ7AglJc98yBorATfW7GrNVsn0kGXVYF6G+M=
+github.com/google/docsy/dependencies v0.6.0/go.mod h1:EDGc2znMbGUw0RW5kWwy2oGgLt0iVXBmoq4UOqstuNE=
+github.com/twbs/bootstrap v4.5.3+incompatible h1:ISyHTj8ffv0BDskTid/wHEY/rKflNOXnGvJBBsJfkjs=
+github.com/twbs/bootstrap v4.5.3+incompatible/go.mod h1:fZTSrkpSf0/HkL0IIJzvVspTt1r9zuf7XlZau8kpcY0=
+github.com/twbs/bootstrap v4.6.2+incompatible/go.mod h1:fZTSrkpSf0/HkL0IIJzvVspTt1r9zuf7XlZau8kpcY0=
